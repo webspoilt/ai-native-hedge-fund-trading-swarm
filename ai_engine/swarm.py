@@ -27,6 +27,8 @@ class AgentResponse(BaseModel):
     data: Dict[str, Any] = Field(default_factory=dict)
 
 
+from .options_agent import OptionsAgent
+
 class QuantSwarm:
     """
     Multi-agent quant trading swarm using LangChain.
@@ -45,6 +47,7 @@ class QuantSwarm:
         self.fundamental_agent = FundamentalAgent(self.llm)
         self.technical_agent = TechnicalAgent(self.llm)
         self.sentiment_agent = SentimentAgent(self.llm)
+        self.options_agent = OptionsAgent(self.llm)
         self.risk_manager = RiskManager()
     
     async def analyze(
