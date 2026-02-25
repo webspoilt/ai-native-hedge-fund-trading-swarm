@@ -55,3 +55,7 @@ docker run --env-file .env -p 8000:8000 quant-swarm:latest
 
 ## 🤝 Contributing
 Pull requests must pass all quantitative unit tests and rigorous backtesting constraints.
+
+## ?? Future Roadmap & Enhancements
+- **Options & Derivatives Agent**
+- **Connect the backtesting engine directly to a massive tick-data lake (e.g., ArcticDB)**
